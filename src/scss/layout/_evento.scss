@@ -24,10 +24,24 @@ main {
         height: 30rem;
         transition: width 0.5s, height 0.5s;
         @include m.center;
+        flex-direction: column;
+
+        img {
+            width: 80%;
+        }
+
+        @include m.tablet {
+            img {
+                width: 55%;
+            }
+        }
         @include m.desktop {
             height: 59rem;
+
+            img {
+                width: 45%;
+            }
         }
-        flex-direction: column;
 
         .evento-anio {
             color: v.$white;

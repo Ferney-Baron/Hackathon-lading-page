@@ -1,0 +1,27 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.premios {
+    background-color: #00e947;
+    background-image: linear-gradient(160deg, #00e947 0%, #ffffff 100%);
+    padding-top: 2rem;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+
+    .premio-contenedor {
+        
+
+        h3 {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.objetivo {
+
+    background-color: #eaedf0;
+    // background-color: #f8f9fa;
+    padding: 4rem 4rem;
+    @include m.center;
+    flex-direction: column;
+
+    img {
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}

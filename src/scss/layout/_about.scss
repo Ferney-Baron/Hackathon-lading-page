@@ -2,33 +2,49 @@
 @use 'base/mixins' as m;
 
 .about {
-    background-color: v.$white;
-    // padding: 1rem;
+    // background-color: #f8f9fa;
+    background-color: #eaedf0;
+
+
+    margin-top: 2rem;
+    padding: 4rem 4rem 0 4rem;
+    display: grid;
+    @include m.tablet {
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+            "n1 n1"
+            "n2 n3"
+        ;
+    }
 
     .about-preguntas {
+        text-align: center;
 
-      
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-     
+        @include m.tablet {
+            &:nth-child(1) {
+                grid-area: n1;
+            }
+            &:nth-child(2) {
+                grid-area: n2;
+            }
+            &:nth-child(3) {
+                grid-area: n3;
+            }
+        }
 
         h3 {
-            font-size: 3rem;
+            font-size: 2rem;
+            padding: 1rem;
+            border-bottom: 2px solid v.$darkgray;
         }
 
         p {
-            font-size: 2rem;
+            text-align: justify;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            
         }
-
-        @include m.desktop {
-            align-items: initial;
-            &:nth-child(2) {
-                text-align: right;
-            }
-        }
-        
     }
 }
