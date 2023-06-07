@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$primaryFont;
+    overflow: auto;
+    height: 100rem;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}

@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+main {
+    // overflow: hidden;
+    // height: 100vh;
+    // transition: width 0.5s, height 0.5s;
+    // @include m.tablet {
+    //     height: 100rem;
+    // }
+
+    background: rgb(2, 7, 55);
+    background: -moz-linear-gradient(90deg, rgba(2, 7, 55, 1) 20%, rgba(15, 147, 92, 1) 50%, rgba(2, 7, 55, 1) 80%);
+    background: -webkit-linear-gradient(90deg, rgba(2, 7, 55, 1) 20%, rgba(15, 147, 92, 1) 50%, rgba(2, 7, 55, 1) 80%);
+    background: linear-gradient(90deg, rgba(2, 7, 55, 1) 20%, rgba(15, 147, 92, 1) 50%, rgba(2, 7, 55, 1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020737", endColorstr="#020737", GradientType=1);
+
+
+    .evento {
+        background-image: url('https://images.vexels.com/media/users/3/157944/isolated/preview/b6a72d46f16e457ccfacf410edc462a6-diseno-de-cuadricula-de-puntos.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 30rem;
+        transition: width 0.5s, height 0.5s;
+        @include m.center;
+        @include m.desktop {
+            height: 59rem;
+        }
+        flex-direction: column;
+
+        .evento-anio {
+            color: v.$white;
+            font-size: 4rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .evento-texto {
+            width: 54%;
+            color: v.$white;
+            font-size: 3rem;
+            margin-right: auto;
+            margin-left: 2rem;
+            word-break: break-all;
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "description": "Lading Page for Taxis Libres Hackathon ",
+  "main": "index.js",
+  "scripts": {
+    "css": "gulp css",
+    "dev": "gulp dev"
+  },
+  "keywords": [
+    "VanillaJS"
+  ],
+  "author": "Ferney Baron",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser-js": "^5.2.2",
+    "sass": "^1.62.1"
+  }
+}

@@ -1,0 +1,69 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nav {
+    background-color: rgba(v.$black, .9);
+    height: 6rem;
+    @include m.center;
+
+    img,
+    .nav-icon {
+        margin-left: auto;
+    }
+
+    img {
+        width: 14rem;
+    }
+    
+    @include m.desktop {
+    
+        padding: 0 10rem 0 10rem;
+
+        .nav-icon {
+            display: none;
+        }
+    }
+    
+    .nav-icon {
+        margin-right: 3rem;
+        background-color: v.$lightgreen;
+        padding: 1rem;
+        border-radius: 50%;
+        font-weight: 800;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 88px;
+        right: 0;
+        display: none;
+        width: 100%;
+
+        @include m.desktop {
+            display: block;
+            position: initial;
+            color: v.$white;
+        }
+
+        .nav-menu-contenido {
+            @include m.center;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 90%;
+
+            @include m.desktop {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+
+            li {
+                list-style: none;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

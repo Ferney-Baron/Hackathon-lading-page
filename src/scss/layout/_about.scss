@@ -1,0 +1,34 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about {
+    background-color: v.$white;
+    // padding: 1rem;
+
+    .about-preguntas {
+
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+     
+
+        h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        @include m.desktop {
+            align-items: initial;
+            &:nth-child(2) {
+                text-align: right;
+            }
+        }
+        
+    }
+}
