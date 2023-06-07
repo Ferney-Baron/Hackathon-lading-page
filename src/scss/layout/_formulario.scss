@@ -96,17 +96,19 @@
                     width: 10%;
                     all: unset;
                     text-align: right;
-                    color: v.$white;
-                    border: 1px solid v.$white;
+                    color: v.$black;
+                    background-color: v.$lightgreen;
+                    border: 1px solid v.$lightgreen;
                     padding: 1rem 2rem;
-                    border-radius: 2rem;
+                    border-radius: 1rem;
                     font-size: 1.7rem;
                     cursor: pointer;
 
                     &:hover {
-                        background-color: v.$white;
-                        color: v.$black;
-                        transition: background-color 0.5s, color 0.5s;
+                        background-color: #121939;
+                        color: v.$white;
+                        transition: background-color 0.3s, color 0.5s;
+                        border: 1px solid #121939;
                     }
                 }
             }

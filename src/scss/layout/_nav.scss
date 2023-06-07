@@ -2,6 +2,8 @@
 @use 'base/mixins' as m;
 
 .nav {
+    position: fixed;
+    width: 100%;
     background-color: rgba(v.$black, .9);
     height: 6rem;
     @include m.center;
@@ -14,16 +16,16 @@
     img {
         width: 14rem;
     }
-    
+
     @include m.desktop {
-    
+
         padding: 0 10rem 0 10rem;
 
         .nav-icon {
             display: none;
         }
     }
-    
+
     .nav-icon {
         margin-right: 3rem;
         background-color: v.$lightgreen;
@@ -36,15 +38,17 @@
         position: fixed;
         left: 0;
         bottom: 0;
-        top: 88px;
+        top: 60px;
         right: 0;
         display: none;
         width: 100%;
+        background-color: rgba(#121939, .9);
 
         @include m.desktop {
             display: block;
             position: initial;
             color: v.$white;
+            background-color: rgba(#121939, 0);
         }
 
         .nav-menu-contenido {
@@ -59,10 +63,18 @@
             }
 
 
-            li {
-                list-style: none;
+            a {
+                text-decoration: none;
                 font-size: 1.4rem;
                 font-weight: 500;
+                color: v.$white;
+                font-size: 2rem;
+                cursor: pointer;
+                
+                @include m.desktop {
+                    font-size: 1.5rem;
+                }
+
             }
         }
     }
