@@ -2,16 +2,12 @@
 @use 'base/mixins' as m;
 
 .about {
-    // background-color: #f8f9fa;
     background-color: #eaedf0;
-
-
     margin-top: 2rem;
-    padding: 4rem 4rem 0 4rem;
-    display: grid;
+    padding: 7rem 4rem 0 4rem;
+    
     @include m.tablet {
-        gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 2rem);
         grid-template-rows: 1fr;
         grid-template-areas: 
             "n1 n1"
@@ -34,16 +30,22 @@
             }
         }
 
-        h3 {
-            font-size: 2rem;
-            padding: 1rem;
+        .about-preguntas-principal {
             border-bottom: 2px solid v.$darkgray;
+            font-size: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .about-preguntas-datos {
+            font-size: 4rem;
+            text-transform: capitalize;
+            
         }
 
         p {
             text-align: justify;
             font-size: 1.4rem;
-            line-height: 2.4rem;
+            line-height: 3rem;
             
         }
     }

@@ -5,12 +5,8 @@
     background-color: #242424;
     background-image: linear-gradient(135deg, #242424 0%, #3a3a3a 100%);
 
-    // padding: 2rem 3rem;
-
     @include m.tablet {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        @include m.grid(2, 0);
     }
 
     img {
@@ -24,10 +20,18 @@
     }
 
     .formulario-contenido {
-        padding: 4rem 3rem;
+        padding: 2rem 3rem 0 3rem;
 
         @include m.tablet {
-            padding: 5rem 6rem;
+            padding: 6rem 6rem 1rem 6rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        span {
+            font-weight: 800;
         }
 
         h2,
@@ -59,7 +63,6 @@
                 padding-top: 2rem;
                 padding-bottom: 2rem;
             }
-
 
             .formulario-contenido-checkbox {
                 display: flex;
@@ -93,30 +96,10 @@
                 margin-top: 2rem;
 
                 button {
-                    width: 10%;
-                    all: unset;
-                    text-align: right;
-                    color: v.$black;
-                    background-color: v.$lightgreen;
-                    border: 1px solid v.$lightgreen;
-                    padding: 1rem 2rem;
-                    border-radius: 1rem;
-                    font-size: 1.7rem;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #121939;
-                        color: v.$white;
-                        transition: background-color 0.3s, color 0.5s;
-                        border: 1px solid #121939;
-                    }
+                    @include m.boton(v.$black, v.$lightgreen, v.$white, #121939);
                 }
             }
 
         }
-
-
     }
-
-
 }

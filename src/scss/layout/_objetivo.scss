@@ -4,7 +4,6 @@
 .objetivo {
 
     background-color: #eaedf0;
-    // background-color: #f8f9fa;
     padding: 4rem 4rem;
     @include m.center;
     flex-direction: column;
@@ -15,6 +14,6 @@
 
     p {
         font-size: 1.4rem;
-        line-height: 2.4rem;
+        line-height: 3rem;
     }
 }

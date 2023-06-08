@@ -1,14 +1,35 @@
-
 @mixin center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-$telefono: 480px;
-$tablet: 768px;
-$desktop: 992px;
-$desktopXL:1200px;
+@mixin grid($colums, $gap) {
+    display: grid;
+    grid-template-columns: repeat($colums, 1fr);
+    gap: $gap;
+}
+
+@mixin boton($textColor, $bgColor, $textHover, $bgHover) {
+    width: 10%;
+    all: unset;
+    text-align: right;
+    color: $textColor;
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    margin-right: 4rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $bgHover;
+        color: $textHover;
+        transition: background-color 0.3s, color 0.5s;
+        border: 1px solid $bgHover;
+    }
+}
 
 @mixin telefono {
     @media (min-width: 480px) {

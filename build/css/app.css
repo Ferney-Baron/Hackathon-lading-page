@@ -331,6 +331,7 @@ body {
 
 h1, h2, h3, ul {
   margin: 0;
+  color: #242424;
 }
 
 .nav {
@@ -422,7 +423,7 @@ main .evento {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 30rem;
+  height: 34rem;
   transition: width 0.5s, height 0.5s;
   display: flex;
   align-items: center;
@@ -439,7 +440,7 @@ main .evento img {
 }
 @media (min-width: 992px) {
   main .evento {
-    height: 59rem;
+    height: 63rem;
   }
   main .evento img {
     width: 45%;
@@ -463,13 +464,13 @@ main .evento .evento-texto {
 .about {
   background-color: #eaedf0;
   margin-top: 2rem;
-  padding: 4rem 4rem 0 4rem;
-  display: grid;
+  padding: 7rem 4rem 0 4rem;
 }
 @media (min-width: 768px) {
   .about {
-    gap: 2rem;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     grid-template-rows: 1fr;
     grid-template-areas: "n1 n1" "n2 n3";
   }
@@ -488,15 +489,19 @@ main .evento .evento-texto {
     grid-area: n3;
   }
 }
-.about .about-preguntas h3 {
-  font-size: 2rem;
-  padding: 1rem;
+.about .about-preguntas .about-preguntas-principal {
   border-bottom: 2px solid #242424;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.about .about-preguntas .about-preguntas-datos {
+  font-size: 4rem;
+  text-transform: capitalize;
 }
 .about .about-preguntas p {
   text-align: justify;
   font-size: 1.4rem;
-  line-height: 2.4rem;
+  line-height: 3rem;
 }
 
 .objetivo {
@@ -512,7 +517,7 @@ main .evento .evento-texto {
 }
 .objetivo p {
   font-size: 1.4rem;
-  line-height: 2.4rem;
+  line-height: 3rem;
 }
 
 .patrocinadores {
@@ -523,23 +528,28 @@ main .evento .evento-texto {
   justify-content: center;
   flex-direction: column;
 }
-@media (min-width: 768px) {
-  .patrocinadores {
-    height: 25rem;
-  }
-}
 .patrocinadores h2 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .patrocinadores h2 {
+    margin: 0 0 5rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .patrocinadores {
+    height: 40rem;
+  }
 }
 .patrocinadores .patrocinadores-img {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
   gap: 3rem;
+  justify-items: center;
 }
 @media (min-width: 768px) {
   .patrocinadores .patrocinadores-img {
@@ -556,26 +566,86 @@ main .evento .evento-texto {
 }
 
 .premios {
-  height: 90vh;
-  background-color: #00e947;
-  background-image: linear-gradient(160deg, #00e947 0%, #ffffff 100%);
-  padding-top: 2rem;
+  height: 80rem;
+  background-color: #bdbdbd;
+  background-image: linear-gradient(135deg, #bdbdbd 0%, #f8f9fa 100%);
+  padding: 6rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.premios h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .premios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    height: 60rem;
+  }
+}
+.premios .premios-contenedor {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .premios .premios-contenedor {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}
+.premios .premio-boton {
+  display: flex;
+  justify-content: end;
+}
+.premios .premio-boton a {
+  width: 10%;
+  all: unset;
+  text-align: right;
+  color: #000;
+  background-color: #C3DC00;
+  border: 1px solid #C3DC00;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+.premios .premio-boton a:hover {
+  background-color: #121939;
+  color: #fff;
+  transition: background-color 0.3s, color 0.5s;
+  border: 1px solid #121939;
+}
+.premios .premio-contenedor {
+  padding: 2rem 0;
+  width: 100%;
+}
+.premios .premio-contenedor:first-child, .premios .premio-contenedor:nth-child(2) {
+  border-bottom: 1px solid #000;
+}
+@media (min-width: 768px) {
+  .premios .premio-contenedor:first-child, .premios .premio-contenedor:nth-child(2) {
+    border-right: 1px solid #000;
+    border-bottom: 0;
+    padding: 0;
   }
 }
 .premios .premio-contenedor h3 {
   text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
 }
 .premios .premio-contenedor ul {
   list-style: none;
+  padding: 0;
 }
-.premios .premio-contenedor ul li:nth-child(2n) {
-  background-color: #00e947;
+.premios .premio-contenedor ul li {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.4rem;
 }
 
 .formulario {
@@ -586,6 +656,7 @@ main .evento .evento-texto {
   .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 }
 .formulario img {
@@ -599,12 +670,18 @@ main .evento .evento-texto {
   }
 }
 .formulario .formulario-contenido {
-  padding: 4rem 3rem;
+  padding: 2rem 3rem 0 3rem;
 }
 @media (min-width: 768px) {
   .formulario .formulario-contenido {
-    padding: 5rem 6rem;
+    padding: 6rem 6rem 1rem 6rem;
   }
+}
+.formulario .formulario-contenido h2 {
+  font-size: 2rem;
+}
+.formulario .formulario-contenido span {
+  font-weight: 800;
 }
 .formulario .formulario-contenido h2,
 .formulario .formulario-contenido p {
@@ -669,6 +746,7 @@ main .evento .evento-texto {
   padding: 1rem 2rem;
   border-radius: 1rem;
   font-size: 1.7rem;
+  margin-right: 4rem;
   cursor: pointer;
 }
 .formulario .formulario-contenido form .formulario-contenido-boton button:hover {
@@ -676,4 +754,41 @@ main .evento .evento-texto {
   color: #fff;
   transition: background-color 0.3s, color 0.5s;
   border: 1px solid #121939;
+}
+
+footer {
+  padding: 7rem 3rem 0 3rem;
+  background-color: #242424;
+}
+@media (min-width: 992px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+footer div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer div h3 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+footer div a {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+footer div p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: justify;
+  width: 16rem;
+}
+footer .formulario-border {
+  border-right: 1px solid #fff;
 }

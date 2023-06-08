@@ -2,12 +2,7 @@
 @use 'base/mixins' as m;
 
 main {
-    // overflow: hidden;
-    // height: 100vh;
-    // transition: width 0.5s, height 0.5s;
-    // @include m.tablet {
-    //     height: 100rem;
-    // }
+  
 
     background: rgb(2, 7, 55);
     background: -moz-linear-gradient(90deg, rgba(2, 7, 55, 1) 20%, rgba(15, 147, 92, 1) 50%, rgba(2, 7, 55, 1) 80%);
@@ -21,10 +16,11 @@ main {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 30rem;
+        height: 34rem;
         transition: width 0.5s, height 0.5s;
         @include m.center;
         flex-direction: column;
+        // padding-top: 7rem;
 
         img {
             width: 80%;
@@ -36,7 +32,7 @@ main {
             }
         }
         @include m.desktop {
-            height: 59rem;
+            height: 63rem;
 
             img {
                 width: 45%;

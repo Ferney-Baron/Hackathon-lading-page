@@ -3,37 +3,36 @@
 
 .patrocinadores {
     background-color: #f8f9fa;
-    // padding-top: 3rem;
     height: 40rem;
     @include m.center;
     flex-direction: column;
 
-    @include m.tablet {
-        height: 25rem;
-    }
     h2 {
-        // margin: 0 0 10rem 0;
         text-align: center;
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 800;
         text-transform: uppercase;
+
+        @include m.tablet {
+            margin: 0 0 5rem 0;
+        }
+    }
+
+    @include m.tablet {
+        height: 40rem;
     }
 
     .patrocinadores-img {
-
         width: 90%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        @include m.grid(2, 3rem);
         justify-items: center;
-        gap: 3rem;
 
         @include m.tablet {
             grid-template-columns: repeat(6, 1fr);
-            // padding: 0 20rem;
         }
 
         .contenedor-img {
-           @include m.center;
+            @include m.center;
         }
 
         .img {

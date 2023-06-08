@@ -1,40 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     imagenes();
     scrollNav();
-})
+    detectarDisplayBoton();
+});
 
-const menu = document.querySelector('.nav-icon');
-const contenido = document.querySelector('.nav-menu');
-const formulario = document.querySelector('.formulario');
+function detectarDisplayBoton() {
+    const menu = document.querySelector('.nav-icon');
+    const contenido = document.querySelector('.nav-menu');
 
+    menu.addEventListener('click', () => {
+        const contenidoDisplay = contenido.style;
+    
+        (contenidoDisplay.display === 'block') ? contenidoDisplay.display = 'none'
+            : contenidoDisplay.display = 'block';
+    });
+
+    window.addEventListener('resize', () => {
+        (window.innerWidth > 992) ? contenido.style.display = 'block' : contenido.style.display = 'none';
+    
+    });
+}
 
 function scrollNav() {
     const enlaces = document.querySelectorAll('.nav-menu-contenido a');
-    // console.log(enlaces);
-    
-    enlaces.forEach( enlace => {
-        enlace.addEventListener( 'click', (e) => {
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', (e) => {
             e.preventDefault();
-            const seccion = document.querySelector(e.target.attributes.href.value)
+            const seccion = document.querySelector(e.target.attributes.href.value);
             seccion.scrollIntoView({ behavior: "smooth" });
         });
     });
-
-
-    
 }
-
-menu.addEventListener('click', () => {
-    const contenidoDisplay = contenido.style;
-
-    (contenidoDisplay.display === 'block') ? contenidoDisplay.display = 'none'
-        : contenidoDisplay.display = 'block'; 
-});
-
-window.addEventListener('resize', () => {
-    (window.innerWidth > 992) ? contenido.style.display = 'block' : contenido.style.display = 'none';
-
-});
 
 function imagenes() {
     const patrocinios = document.querySelector('.patrocinadores-img');
@@ -49,3 +46,11 @@ function imagenes() {
         patrocinios.innerHTML = contenido;
     }
 }
+
+const botonFormulario = document.querySelector('.boton-formulario');
+
+botonFormulario.addEventListener('click', (e) => {
+    e.preventDefault();
+    const seccion = document.querySelector(e.target.attributes.href.value);
+    seccion.scrollIntoView({ behavior: "smooth" });
+});
