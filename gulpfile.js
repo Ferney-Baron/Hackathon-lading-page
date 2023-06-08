@@ -16,14 +16,14 @@ function css( done ) {
 function js( done ) {
 
     src('src/js/**/*.js') 
-        // .pipe(terser({
-        //     mangle: {
-        //       toplevel: true
-        //     }
-        // }))
-        // .on('error', function (error) {
-        //    this.emit('end')
-        // })
+        .pipe(terser({
+            mangle: {
+              toplevel: true
+            }
+        }))
+        .on('error', function (error) {
+           this.emit('end')
+        })
 
         .pipe( dest('build/js') )
     done();
